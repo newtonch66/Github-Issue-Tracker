@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Daisy & Tailwind Link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Font Awesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Geist Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="./assets/github-logo.png" type="image/x-icon">
+    <title>Home | Github-Issue-Tracker</title>
+
+    <!-- css -->
+    <style>
+        * {
+            font-family: "Geist", sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navbar Section -->
+    <header class=" flex items-center bg-slate-100 shadow justify-between px-10">
+        <div class="flex items-center gap-3 py-3">
+            <div class="">
+                <img src="./assets/github-logo.png" alt="">
+            </div>
+            <div>
+                <h2 class="text-4xl font-bold">GitHub Issues Tracker</h2>
+            </div>
+        </div>
+        <div class="flex gap-5">
+            <div class=" ">
+                <label class="input">
+                    <i class="font-bold text-gray-500 fa-solid fa-magnifying-glass"></i>
+                    <input class="text-xl font-semibold" type="Search" required placeholder="Search issues..." />
+                </label>
+            </div>
+
+            <div>
+                <button class="btn btn-primary text-xl font-bold"><i class="fa-solid fa-plus"></i>New Issue</button>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- all button section -->
+     <section class=" w-11/12 mx-auto mt-20 shadow p-4  bg-slate-100 ">
+        <div class="">
+            <button class="btn btn-primary">All</button>
+            <button class="btn">Open</button>
+            <button class="btn">Closed</button>
+        </div>
+     </section>
+
+     <!-- card section -->
+
+</body>
+
+</html>
