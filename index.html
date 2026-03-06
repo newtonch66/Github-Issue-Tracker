@@ -15,22 +15,47 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!--Geist Font Link -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="./assets/github-logo.png" type="image/x-icon">
     <title>Github-Issue-Tracker</title>
-    
+
     <!-- css -->
     <style>
-        *{
+        * {
             font-family: "Geist", sans-serif;
         }
-
     </style>
 </head>
 
 <body>
-    <H1>Hello</H1>
+    <!-- Login Page Section -->
+    <section class=" sm:w-full md:w-4/12 mx-auto bg-slate-100 rounded-md  shadow-lg p-6 mt-16 text-center space-y-6">
+        <div class="">
+            <img class="mx-auto block" src="./assets/github-logo.png" alt="">
+        </div>
+        <div class="">
+            <h2 class="text-4xl font-bold py-3">GitHub Issues Tracker</h2>
+            <p class="text-gray-400 font-semibold">Sign in to manage your issues</p>
+        </div>
+
+        <div>
+            <fieldset class="fieldset py-5">
+  <label class="label text-xl font-semibold text-neutral">Username</label>
+  <input type="username" class="input w-full rounded-lg" placeholder="Enter Username" />
+
+  <label class="label text-xl font-semibold text-neutral">Password</label>
+  <input  type="password" class="input w-full rounded-lg" placeholder="Enter Password" />
+
+  <button class="btn btn-primary mt-4">Sign In</button>
+</fieldset>
+          
+            
+        </div>
+    </section>
+
     <script src="./script/script.js"></script>
 </body>
 
