@@ -72,6 +72,38 @@ function renderData(issues) {
     });
 }
 
+function openModal(id) {
+    const issue = allIssues.find(i => i.id === id);
 
+    const priorityColor = issue.priority === "high"
+        ? "bg-red-500 text-white"
+        : issue.priority === "medium"
+        ? "bg-yellow-400 text-white"
+        : "bg-green-500 text-white";
+
+    const statusColor = issue.status === "open" ? "bg-green-500" : "bg-red-500";
+
+    const labelsHTML = issue.labels.map(label => `
+        <span class="bg-[#FEECEC] rounded-full px-3 py-1 font-semibold text-[#EF4444] text-sm">${label}</span>
+    `).join("");
+
+    const date = new Date(issue.createdAt).toLocaleDateString();
+
+    document.getElementById("modal-title").innerText = issue.title;
+    document.getElementById("modal-status").innerText = issue.status === "open" ? "Opened" : "Closed";
+    document.getElementById("modal-status").className = `text-white text-sm font-bold px-3 py-1 rounded-full ${statusColor}`;
+    document.getElementById("modal-author").innerText = `Opened by ${issue.author} • ${date}`;
+    document.getElementById("modal-labels").innerHTML = labelsHTML;
+    document.getElementById("modal-description").innerText = issue.description;
+    document.getElementById("modal-assignee").innerText = issue.assignee;
+    document.getElementById("modal-priority").innerText = issue.priority.toUpperCase();
+    document.getElementById("modal-priority").className = `text-white text-sm font-bold px-3 py-1 rounded-full ${priorityColor}`;
+
+    document.getElementById("issue-modal").classList.remove("hidden");
+}
+
+function closeModal() {
+    document.getElementById("issue-modal").classList.add("hidden");
+}
 
 loadDataWithModal();
