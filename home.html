@@ -83,7 +83,7 @@
             </div>
 
             <div class="flex items-center gap-2">
-                <div><img src="./assets/Closed- Status .png " alt=""></div>
+                <div><img src="./assets/Closed-Status.png" alt=""></div>
                 <div>
                     <h3>Close</h3>
                 </div>
@@ -131,7 +131,47 @@
     </section>
 
 
-    </section>
+  <section>
+   
+<div id="issue-modal" class="hidden fixed inset-0  bg-opacity-50 flex items-center justify-center z-50">
+    <div class="bg-white rounded-xl shadow-xl w-11/12 md:w-2/5 p-8">
+
+        <h2 id="modal-title" class="text-2xl font-bold mb-3"></h2>
+
+        <div class="flex items-center gap-3 mb-4">
+            <span id="modal-status"></span>
+            <span id="modal-author" class="text-gray-400 text-sm"></span>
+        </div>
+
+       
+        <div id="modal-labels" class="flex gap-2 flex-wrap mb-5"></div>
+
+        
+        <p id="modal-description" class="text-gray-600 mb-6"></p>
+
+    
+        <div class="flex gap-4 bg-gray-100 rounded-lg p-4 mb-6">
+            <div class="w-1/2">
+                <p class="text-gray-400 text-sm mb-1">Assignee:</p>
+                <p id="modal-assignee" class="font-bold"></p>
+            </div>
+            <div class="w-1/2">
+                <p class="text-gray-400 text-sm mb-1">Priority:</p>
+                <span id="modal-priority"></span>
+            </div>
+        </div>
+
+        <div class="flex justify-end">
+            <button onclick="closeModal()" class="btn btn-primary px-8">Close</button>
+        </div>
+    </div>
+</div>
+  </section>
+
+
+
+
+
 
 
     <script src="./script/home.js"></script>
