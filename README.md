@@ -1,0 +1,14 @@
+1️ What is the difference between var, let, and const?
+Ans:Ans:JavaScript provides three ways to declare variables: var, let, and const, but they differ in scope, hoisting behaviour, and re-assignment rules.
+
+2️ What is the spread operator (...)?
+Ans:The spread operator (...) in JavaScript is an ES6 syntax that expands iterables (like arrays or strings) or objects into individual elements or properties.
+
+3️ What is the difference between map(), filter(), and forEach()?
+Ans:The forEach() and map() methods in JavaScript are used to iterate over arrays, but they serve different purposes. forEach() executes a provided function once for each array element without returning a new array, while map() transforms elements and returns a new array.
+
+4️ What is an arrow function?
+Ans:An arrow function, introduced in ES6, is a concise, anonymous syntax for writing function expressions in JavaScript, using the => operator
+
+5️ What are template literals?
+Ans:Template literals are strings written using backticks (`) that allow variables and expressions to be embedded directly. Introduced in ES6, they make strings more readable and support easy interpolation and multi-line text without complex concatenation.
