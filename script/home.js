@@ -10,6 +10,17 @@ async function loadDataWithModal() {
         renderData(allIssues);
     });
 
+
+    document.getElementById("search-input").addEventListener("input", (e) => {
+        const searchText = e.target.value.toLowerCase();
+
+        const filtered = allIssues.filter(issue =>
+            issue.title.toLowerCase().includes(searchText)
+        );
+
+        renderData(filtered);
+    });
+
     document.getElementById("btn-open").addEventListener("click", () => {
         const openIssues = allIssues.filter(issue => issue.status === "open");
         renderData(openIssues);
@@ -37,8 +48,8 @@ function renderData(issues) {
         const priorityColor = issue.priority === "high"
             ? "bg-[#FEECEC] text-[#EF4444]"
             : issue.priority === "medium"
-            ? "bg-[#FEF9EC] text-[#F59E0B]"
-            : "bg-[#ECFEF0] text-[#22C55E]";
+                ? "bg-[#FEF9EC] text-[#F59E0B]"
+                : "bg-[#ECFEF0] text-[#22C55E]";
 
         const labelsHTML = issue.labels.map(label => `
             <button class="bg-[#FEECEC] rounded-full px-3 py-1 font-semibold text-[#EF4444] text-sm">
@@ -78,8 +89,8 @@ function openModal(id) {
     const priorityColor = issue.priority === "high"
         ? "bg-red-500 text-white"
         : issue.priority === "medium"
-        ? "bg-yellow-400 text-white"
-        : "bg-green-500 text-white";
+            ? "bg-yellow-400 text-white"
+            : "bg-green-500 text-white";
 
     const statusColor = issue.status === "open" ? "bg-green-500" : "bg-red-500";
 
@@ -107,3 +118,6 @@ function closeModal() {
 }
 
 loadDataWithModal();
+
+
+
