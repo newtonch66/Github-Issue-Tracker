@@ -60,7 +60,7 @@ function renderData(issues) {
         const date = new Date(issue.createdAt).toLocaleDateString();
 
         const card = `
-        <div onclick="openModal(${issue.id})" class="cursor-pointer p-8 bg-white shadow rounded-lg border-t-4 ${issue.status === 'open' ? 'border-green-500' : 'border-red-500'}">
+        <div onclick="openModal(${issue.id})" class="cursor-pointer mb-3 p-8 bg-white shadow rounded-lg border-t-4 ${issue.status === 'open' ? 'border-green-500' : 'border-red-500'}">
             <div class="flex justify-between mb-3">
                 <img src="./assets/${issue.status === 'open' ? 'Open-Status' : 'Closed- Status '}.png" alt="">
                 <button class="rounded-full px-3 py-1 font-semibold text-sm uppercase ${priorityColor}">
